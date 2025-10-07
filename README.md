@@ -1,4 +1,4 @@
-# 🏡 Florida Airbnb Analytics: Uncovering What Drives Profitability in Short-Term Rentals
+#  Florida Airbnb Analytics: Uncovering What Drives Profitability in Short-Term Rentals
 
 This project explores the factors that shape revenue and occupancy in Florida’s Airbnb market — focusing on Broward County (Fort Lauderdale) as a proxy for Miami’s tourism economy.
 
@@ -8,7 +8,7 @@ This case study follows the **Google Data Analytics Capstone framework** (Ask �
 
 ---
 
-## 📘 Project Overview
+##  Project Overview
 
 This project explores what drives revenue and occupancy performance in Florida’s short-term rental market.
 Using publicly available Airbnb data from **Broward County, Florida (Fort Lauderdale metro)**, this analysis investigates how factors like location, amenities, property type, and seasonality impact pricing and profitability.
@@ -19,7 +19,7 @@ This project follows the six-step **Google Data Analytics Case Study Framework: 
 
 ---
 
-## 🧭 Step 1 — Ask
+##  Step 1 — Ask
 
 ### Business Problem
 Florida’s Airbnb market is competitive and seasonal. Hosts, investors, and planners need to understand which factors most affect profitability — including how pricing, amenities, and neighborhood performance drive occupancy and revenue.
@@ -53,7 +53,7 @@ Provide recommendations to:
 
 ---
 
-## 🗂️ Step 2 — Prepare
+##  Step 2 — Prepare
 
 **Dataset Source:** [Inside Airbnb](http://insideairbnb.com/get-the-data)  
 **Region:** Broward County, Florida  
