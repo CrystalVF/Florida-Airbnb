@@ -1,76 +1,109 @@
-#  Florida Airbnb Analytics: Uncovering What Drives Profitability in Short-Term Rentals
+🏡 Florida Airbnb Analytics Capstone Project
+Unlocking What Drives Profitability in Florida’s Short-Term Rentals
+📘 Project Overview
 
-This project explores the factors that shape revenue and occupancy in Florida’s Airbnb market — focusing on Broward County (Fort Lauderdale) as a proxy for Miami’s tourism economy.
+This project explores how location, amenities, property type, and seasonality impact revenue and occupancy performance in Florida’s Airbnb market.
 
-By analyzing real Airbnb data, the study examines how **location, amenities, property type, and seasonality** impact pricing and performance. The goal is to provide insights that help **hosts optimize listings**, **investors identify profitable areas**, and **city planners understand short-term rental dynamics**.
+Since Miami’s dataset is currently unavailable, Broward County (Fort Lauderdale) is used as a representative South Florida region. The goal is to uncover patterns that help:
 
-This case study follows the **Google Data Analytics Capstone framework** (Ask → Prepare → Process → Analyze → Share → Act), emphasizing both **business relevance** and **data storytelling** to drive smarter, evidence-based decisions.
+Hosts optimize pricing and amenities,
 
----
+Investors identify high-performing neighborhoods, and
 
-##  Project Overview
+City planners understand short-term rental trends.
 
-This project explores what drives revenue and occupancy performance in Florida’s short-term rental market.
-Using publicly available Airbnb data from **Broward County, Florida (Fort Lauderdale metro)**, this analysis investigates how factors like location, amenities, property type, and seasonality impact pricing and profitability.
+The project follows the Google Data Analytics Capstone Framework:
+Ask → Prepare → Process → Analyze → Share → Act
 
-Although Miami data is currently unavailable, Broward County provides a representative view of South Florida’s rental ecosystem — offering insights valuable to hosts, investors, and city planners alike.
+🧭 Step 1 — Ask
 
-This project follows the six-step **Google Data Analytics Case Study Framework: Ask → Prepare → Process → Analyze → Share → Act.**
+Business Problem:
+Florida’s Airbnb market is highly seasonal and competitive. Stakeholders need clarity on which factors most affect profitability — including how pricing, amenities, and neighborhood dynamics drive occupancy and revenue.
 
----
+Business Task:
+Analyze Airbnb data from Broward County (proxy for Miami–Fort Lauderdale) to identify key drivers of pricing, occupancy, and revenue.
 
-##  Step 1 — Ask
+Stakeholders:
 
-### Business Problem
-Florida’s Airbnb market is competitive and seasonal. Hosts, investors, and planners need to understand which factors most affect profitability — including how pricing, amenities, and neighborhood performance drive occupancy and revenue.
+Hosts & property managers
 
-### Business Task
-Analyze Airbnb data from Broward County (as a proxy for the Miami–Fort Lauderdale area) to identify the key drivers of pricing, occupancy, and revenue.  
-Provide recommendations to:
+Real estate investors
 
-- Help hosts optimize listings and pricing  
-- Guide investors toward high-performing neighborhoods  
-- Support city planners in understanding market dynamics  
+City/tourism planners
 
-### Stakeholders
-- **Hosts & Property Managers:** Seek to boost occupancy and pricing  
-- **Investors:** Identify profitable property types and locations  
-- **City/Tourism Planners:** Monitor how short-term rentals affect housing and tourism  
+Key Metrics (KPIs):
 
-### Key Metrics (KPIs)
-- **Average Daily Rate (ADR):** Average nightly price per listing  
-- **Occupancy Rate (%):** Nights booked ÷ nights available  
-- **Revenue per Available Listing (RevPAL):** Revenue ÷ total listings  
-- **Amenity Impact Score:** Difference in performance for listings with/without key amenities (WiFi, pool, parking, ocean view)  
-- **Neighborhood Performance Index:** Combination of ADR and occupancy trends by neighborhood  
+Average Daily Rate (ADR)
 
-### Guiding Questions
-- How do pricing and occupancy vary across neighborhoods in Broward County?  
-- Which amenities most influence revenue and occupancy?  
-- How do property types (entire home vs. private/shared room) impact performance?  
-- What seasonal patterns shape demand and pricing?  
-- What insights can hosts, investors, and planners apply to make better decisions?  
+Occupancy Rate (%)
 
----
+Revenue per Available Listing (RevPAL)
 
-##  Step 2 — Prepare
+Amenity Impact Score
 
-**Dataset Source:** [Inside Airbnb](http://insideairbnb.com/get-the-data)  
-**Region:** Broward County, Florida  
-**Snapshot Date:** 2025-06-24  
+Neighborhood Performance Index
 
-**Files Added:**  
-- `listings.csv.gz`  
-- `calendar.csv.gz`  
-- `reviews.csv.gz` *(hosted externally)*  
+Guiding Questions:
 
-**External Link:**  
-- [reviews.csv.gz (Google Drive)](https://drive.google.com/file/d/17VffJI_SM9fR4RJN-NduRZ4nipXmerPQ/view?usp=drive_link)
+How do pricing and occupancy vary by neighborhood?
 
-**Data Log:**  
-Full record available in [`docs/data_log.md`](./docs/data_log.md)
+Which amenities add the most value?
 
-**Data Integrity Notes:**  
-- All files verified for structure and readability  
-- No personally identifiable information (PII) included  
-- Data complies with Airbnb’s public data-sharing standards
+How does property type affect revenue?
+
+What seasonal patterns shape demand?
+
+🗂 Step 2 — Prepare
+
+Data Source: Inside Airbnb
+
+Region: Broward County, Florida
+Snapshot Date: 2025-06-24
+Files:
+
+listings.csv.gz
+
+calendar.csv.gz
+
+reviews.csv.gz
+
+Cloud Hosting:
+Raw .gz files are too large for direct upload, so they are hosted securely on Google Drive:
+
+Dataset	File Type	Link	Notes
+listings.csv.gz	Zipped CSV	[Google Drive Link](https://drive.google.com/file/d/1C1Sq6rhJlpG-uWwhDnVGwkUdasv2t-q7/view?usp=drive_link)
+	Property details (12K rows)
+calendar.csv.gz	Zipped CSV	[Google Drive Link](https://drive.google.com/file/d/1pBhMkCyUmmqD7xZOCnCrxjaiWxFNmdv_/view?usp=drive_link)
+	Daily pricing (~2M rows)
+reviews.csv.gz	Zipped CSV	[Google Drive Link](https://drive.google.com/file/d/17VffJI_SM9fR4RJN-NduRZ4nipXmerPQ/view?usp=drive_link)
+	Guest feedback (~1M rows)
+
+Google Sheets Workspace:
+All data documentation and summaries are maintained in this sheet:
+👉 Florida Airbnb – Data Overview [(Google Sheets)](https://docs.google.com/spreadsheets/d/1YG8ZOMksg2eRijlzSVcHQqhA2RhCt-lzvESVIO5-1jE/edit?usp=drive_link)
+
+📊 Step 4 — Data Validation Summary
+
+Verified datasets open correctly in Google Sheets.
+
+listings.csv → ~12,000 rows (82 columns)
+
+calendar.csv → Partial sample loaded (~2M total rows)
+
+reviews.csv → Linked externally
+
+No missing headers or corrupted data.
+
+Metadata and snapshot details recorded in Data Summary tab.
+
+🧾 Next Step (Day 2 Preview)
+
+Begin data cleaning and analysis in Google Sheets — calculate KPIs (ADR, Occupancy Rate, RevPAL) and prepare first visual summaries by neighborhood and property type.
+
+📅 Progress Summary
+
+✅ Step 1: Business Task Defined
+✅ Step 2: Project Repo & Data Folder Set
+✅ Step 3: Data Uploaded to Google Drive
+✅ Step 4–6: Data Summary + Metadata Setup Complete
+🔜 Step 7: Metadata Log (data dictionary) – in progress
